@@ -1071,7 +1071,8 @@ const projects = [
   {title:'HR Analytics Dashboard', tag:'Tableau', desc:'Workforce analytics covering attrition, headcount, and diversity metrics for leadership.', stack:['Tableau','Excel'], img:'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop'},
   {title:'Customer Churn Analysis', tag:'Python', desc:'Predictive analysis identifying churn drivers using exploratory analysis and visualization.', stack:['Python','Pandas','Seaborn'], img:'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop'},
   {title:'Financial Dashboard', tag:'Power BI', desc:'P&L, cash flow, and budget-vs-actual tracking dashboard for finance stakeholders.', stack:['Power BI','SQL'], img:'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop'},
-  {title:'Netflix Data Analysis', tag:'Python', desc:'Content trend analysis across genres, ratings, and release years using Netflix catalog data.', stack:['Python','Matplotlib'], img:'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=600&h=400&fit=crop'},
+  {title:'Netflix Data Analysis', tag:'Python', desc:'Content trend analysis across genres, ratings, and release years using Netflix catalog data.', stack:['Python','Matplotlib'], img:'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=600&h=400&fit=crop', github:'https://github.com/Mr-adarsh-developer/Netflix-Data-Analysis-Project.git',
+  live:'https://drive.google.com/file/d/1rYFvmEZHiKHDwIIGCVOwfF--rM4DBnmJ/view?usp=drivesdk'},
   {title:'E-commerce Sales Analysis', tag:'SQL', desc:'Cohort and basket analysis to uncover purchasing patterns and top-performing categories.', stack:['SQL','Excel'], img:'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop'},
   {title:'Marketing Dashboard', tag:'Power BI', desc:'Campaign performance dashboard tracking CAC, ROAS, and funnel conversion.', stack:['Power BI','Google Looker Studio'], img:'https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=600&h=400&fit=crop'},
   {title:'Healthcare Analytics Dashboard', tag:'Tableau', desc:'Patient outcome and resource utilization dashboard for hospital operations teams.', stack:['Tableau','SQL'], img:'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop'},
@@ -1087,8 +1088,9 @@ projGrid.innerHTML = projects.map(p => `
       <p>${p.desc}</p>
       <div class="proj-stack">${p.stack.map(s=>`<span>${s}</span>`).join('')}</div>
       <div class="proj-links">
-        <a href="#" class="repo"><i class="fa-brands fa-github"></i> GitHub</a>
-        <a href="#" class="live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+        
+        <a href="${p.github}" target="_blank" class="repo"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="${p.live}" target="_blank" class="live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
       </div>
     </div>
   </div>
