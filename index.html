@@ -241,6 +241,85 @@ section{position:relative;padding:140px 0;}
 /* reveal */
 .reveal{opacity:0;transform:translateY(40px);}
 
+
+  
+/* ============ INTRO VIDEO SECTION ============ */
+
+#intro-video {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(0,245,255,0.025),
+    rgba(124,58,237,0.05),
+    transparent
+  );
+}
+
+.video-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 7px;
+  border-radius: 24px;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary),
+    var(--accent)
+  );
+  box-shadow:
+    0 0 25px rgba(0,245,255,0.12),
+    0 0 55px rgba(124,58,237,0.12);
+}
+
+.video-inner {
+  background: var(--bg-elevated);
+  border-radius: 19px;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-inner video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #000;
+  border-radius: 19px;
+}
+
+.video-caption {
+  text-align: center;
+  margin-top: 28px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.video-caption span {
+  color: var(--primary);
+  font-family: var(--font-mono);
+}
+
+@media(max-width:768px) {
+  #intro-video {
+    padding: 90px 0;
+  }
+
+  .video-wrapper {
+    border-radius: 17px;
+    padding: 4px;
+  }
+
+  .video-inner,
+  .video-inner video {
+    border-radius: 14px;
+  }
+}
+
 /* ============ ABOUT ============ */
 #about{background:linear-gradient(180deg,transparent,rgba(124,58,237,.04),transparent);}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
@@ -518,6 +597,57 @@ footer{padding:60px 0 30px;border-top:1px solid var(--glass-border);position:rel
   <div class="scroll-cue"><span>Scroll</span><div class="line"></div></div>
 </section>
 
+
+<!-- ============ INTRO VIDEO ============ -->
+
+<section id="intro-video">
+  <div class="container">
+
+    <div class="section-head center reveal">
+      <div class="eyebrow">Get To Know Me</div>
+
+      <h2 class="section-title">
+        More Than Just <span style="
+          background:linear-gradient(135deg,var(--primary),var(--secondary),var(--accent));
+          -webkit-background-clip:text;
+          background-clip:text;
+          color:transparent;
+        ">Data & Numbers</span>
+      </h2>
+
+      <p class="section-sub">
+        A quick introduction to who I am, what I do,
+        and my passion for turning data into insights.
+      </p>
+    </div>
+
+    <div class="video-wrapper reveal">
+      <div class="video-inner">
+
+        <video
+          controls
+          preload="metadata"
+          playsinline
+          poster="video-thumbnail.jpg"
+        >
+          <source src="intro-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+      </div>
+    </div>
+
+    <div class="video-caption reveal">
+      <span><i class="fa-solid fa-play"></i> MY INTRODUCTION</span>
+      <p>Let's connect and explore the world of data together.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ END INTRO VIDEO ============ -->
+
+  
 <!-- ============ ABOUT ============ -->
 <section id="about">
   <div class="container">
